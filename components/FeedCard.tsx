@@ -6,15 +6,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { IImage } from '@/types';
+import { IImage, IFeedCardProps } from '@/types';
 import { toggleLike } from '@/utils/mockData';
 import CommentModal from './CommentModal';
 import { useRouter } from 'next/navigation';
-
-interface IFeedCardProps {
-  image: IImage;
-  onLikeToggle?: (imageId: string, liked: boolean) => void;
-}
 
 export default function FeedCard({ image, onLikeToggle }: IFeedCardProps) {
   const router = useRouter();

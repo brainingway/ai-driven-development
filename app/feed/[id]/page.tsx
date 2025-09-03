@@ -1,12 +1,7 @@
 import FeedDetail from '@/components/FeedDetail';
 import { getMockFeed } from '@/utils/mockData';
 import { notFound } from 'next/navigation';
-
-interface IFeedDetailPageProps {
-  params: {
-    id: string;
-  };
-}
+import { IFeedDetailPageProps } from '@/types';
 
 export default async function FeedDetailPage({ params }: IFeedDetailPageProps) {
   try {

@@ -6,24 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { IImage } from '@/types';
-
-interface IComment {
-  id: string;
-  text: string;
-  author: {
-    id: string;
-    name: string;
-    avatar: string;
-  };
-  createdAt: string;
-}
-
-interface ICommentModalProps {
-  image: IImage;
-  isOpen: boolean;
-  onClose: () => void;
-}
+import { IImage, IComment, ICommentModalProps } from '@/types';
 
 export default function CommentModal({ image, isOpen, onClose }: ICommentModalProps) {
   const [comments, setComments] = useState<IComment[]>([]);

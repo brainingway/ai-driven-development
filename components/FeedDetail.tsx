@@ -5,14 +5,10 @@ import { ArrowLeft, Heart, MessageCircle, Repeat2, Share2, Download, Bookmark } 
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { IImage } from '@/types';
+import { IImage, IFeedDetailProps } from '@/types';
 import { toggleLike } from '@/utils/mockData';
 import { useRouter } from 'next/navigation';
 import CommentModal from './CommentModal';
-
-interface IFeedDetailProps {
-  image: IImage;
-}
 
 export default function FeedDetail({ image }: IFeedDetailProps) {
   const router = useRouter();
